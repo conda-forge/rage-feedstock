@@ -14,7 +14,7 @@ BASE_GLOB = '{0}-{1}-license'
 DEPENDENCIES = 'dependencies.json'
 LIBRARY_LICENSES = osp.join(RECIPE_DIR, 'library_licenses')
 # Package license is packaged on the recipe root.
-WHITELIST = {'age','age-core','rage'}
+WHITELIST = {'age','age-core','rage', 'age-plugin'}
 
 
 def main():
@@ -27,12 +27,12 @@ def main():
         pkg_glob = BASE_GLOB.format(pkg_name, pkg['version'])
         matches = glob.glob(osp.join(LIBRARY_LICENSES, pkg_glob))
         if len(matches) == 0 and pkg_name not in WHITELIST:
-            missing.append((pkg_name, pkg_license_type, repo_url))
+            missing.append((pkg_name,pkg['version'], pkg_license_type, repo_url))
     if len(missing) > 0:
         print('Licenses for the following dependencies are '
               'not being packaged:')
-        for name, pkg_license, repo in missing:
-            print('* {0} ({1}) -> {2}'.format(name, pkg_license, repo))
+        for name, version, pkg_license, repo in missing:
+            print('* {0} {3} ({1}) -> {2}'.format(name, pkg_license, repo,version))
         sys.exit(1)
 
 

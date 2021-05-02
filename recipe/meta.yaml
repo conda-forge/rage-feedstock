@@ -1,12 +1,12 @@
 {% set name = "rage" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 source:
   url: https://github.com/str4d/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 612754f0a78517dd3ac490a9860b996317dbabcc745e307b9c6e6cab4379c1e7
+  sha256: aad525028966843e0d18f893221c5951955f6b84e5fab34dc1e7bbc52a519e2a
 
 build:
   number: 0

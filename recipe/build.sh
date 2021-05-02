@@ -7,7 +7,7 @@ set -o xtrace -o nounset -o pipefail -o errexit
 # Install cargo-license
 export CARGO_HOME="$BUILD_PREFIX/cargo"
 mkdir $CARGO_HOME
-cargo install cargo-license --version 0.3.0 --locked
+cargo install cargo-license --version 0.4.1 --locked
 
 # Check that all downstream libraries licenses are present
 export PATH=$PATH:$CARGO_HOME/bin

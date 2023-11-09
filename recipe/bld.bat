@@ -1,14 +1,5 @@
-
-:: Install cargo-license
-set CARGO_HOME=%BUILD_PREFIX%\cargo
-mkdir %CARGO_HOME%
-icacls %CARGO_HOME% /grant Users:F
-cargo install cargo-license --version 0.4.1 --locked
-:: Check that all downstream libraries licenses are present
-set PATH=%PATH%;%CARGO_HOME%\bin
-cargo-license --json > dependencies.json
-cat dependencies.json
-python %RECIPE_DIR%\check_licenses.py || goto :error
+:: check licenses
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
 :: build
 cargo install --locked --root "%LIBRARY_PREFIX%" --path .\rage || goto :error

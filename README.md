@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rage-feedstock/
 
 Home: https://github.com/str4d/rage
 
-Package license: MIT OR APACHE-2.0
+Package license: MIT OR Apache-2.0
 
 Summary: rage
 

@@ -24,7 +24,7 @@ test:
 
 about:
   home: https://github.com/str4d/rage
-  license: MIT OR APACHE-2.0
+  license: MIT OR Apache-2.0
   summary: rage
   license_file:
     - LICENSE-APACHE

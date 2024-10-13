@@ -6,7 +6,7 @@ set CARGO_PROFILE_RELEASE_LTO=fat
 :: build
 cargo install --locked ^
     --root "%PREFIX%" ^
-    --path . ^
+    --path .\rage ^
     --no-track ^
     || exit 1
 

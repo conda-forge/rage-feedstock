@@ -46,6 +46,7 @@ about:
     - LICENSE-MIT
     - THIRDPARTY.yml
   homepage: https://github.com/str4d/rage
+  repository: https://github.com/str4d/rage
 
 extra:
   recipe-maintainers:

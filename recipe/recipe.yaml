@@ -21,9 +21,9 @@ build:
     content:
       - if: unix
         then:
-          - cargo auditable install --locked --no-track --bins --root "$PREFIX" --path .
+          - cargo auditable install --locked --no-track --bins --root "$PREFIX" --path rage
         else:
-          - cargo auditable install --locked --no-track --bins --root %PREFIX% --path .
+          - cargo auditable install --locked --no-track --bins --root %PREFIX% --path rage
       - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
 
 requirements:

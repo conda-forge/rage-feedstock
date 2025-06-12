@@ -9,6 +9,8 @@ Package license: MIT OR Apache-2.0
 
 Summary: rage
 
+Development: https://github.com/str4d/rage
+
 Current build status
 ====================
 

@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: rage
-  version: "0.11.2"
+  version: "0.12.0"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/str4d/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: a8e5c57f131683f86957af7fddeccf61a3882383dd24e752bab3855f570c086c
+  sha256: fb5255ff9faa944a15a128f812499cd5c08e6155790e284af34c914cbc3d0103
 
 build:
   number: 0
